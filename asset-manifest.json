@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/KATreadwell/ClickyGame/static/css/main.f9acf145.chunk.css",
+    "main.js": "/KATreadwell/ClickyGame/static/js/main.f46c3b77.chunk.js",
+    "main.js.map": "/KATreadwell/ClickyGame/static/js/main.f46c3b77.chunk.js.map",
+    "runtime-main.js": "/KATreadwell/ClickyGame/static/js/runtime-main.71a1bcc3.js",
+    "runtime-main.js.map": "/KATreadwell/ClickyGame/static/js/runtime-main.71a1bcc3.js.map",
+    "static/js/2.69b5d891.chunk.js": "/KATreadwell/ClickyGame/static/js/2.69b5d891.chunk.js",
+    "static/js/2.69b5d891.chunk.js.map": "/KATreadwell/ClickyGame/static/js/2.69b5d891.chunk.js.map",
+    "index.html": "/KATreadwell/ClickyGame/index.html",
+    "precache-manifest.afee766cd2ea092ba73eba30ac85d2ec.js": "/KATreadwell/ClickyGame/precache-manifest.afee766cd2ea092ba73eba30ac85d2ec.js",
+    "service-worker.js": "/KATreadwell/ClickyGame/service-worker.js",
+    "static/css/main.f9acf145.chunk.css.map": "/KATreadwell/ClickyGame/static/css/main.f9acf145.chunk.css.map",
+    "static/js/2.69b5d891.chunk.js.LICENSE.txt": "/KATreadwell/ClickyGame/static/js/2.69b5d891.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.71a1bcc3.js",
+    "static/js/2.69b5d891.chunk.js",
+    "static/css/main.f9acf145.chunk.css",
+    "static/js/main.f46c3b77.chunk.js"
+  ]
+}
