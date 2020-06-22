@@ -46,20 +46,13 @@ class App extends Component {
   
   shuffleCharacters = (characters) => {
     var currentIndex = characters.length, temporaryValue, randomIndex;
-
-  // While there remain elements to shuffle...
   while (0 !== currentIndex) {
-
-    // Pick a remaining element...
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
-
-    // And swap it with the current element.
     temporaryValue = characters[currentIndex];
     characters[currentIndex] = characters[randomIndex];
     characters[randomIndex] = temporaryValue;
   }
-
   return characters;
   }
 
@@ -103,7 +96,7 @@ class App extends Component {
       <Wrapper>
         <Navbar score={this.state.score} highscore={this.state.highscore}>Kat's Clicky Game!</Navbar>
         <Header>Click on an image to earn points, but don't click on any image more than once!</Header>
-        {/* <div className="container"> */}
+        <div className="container">
         {this.state.characters.map((character, index) => (
           <CharacterCard
             id={character.id}
@@ -114,7 +107,7 @@ class App extends Component {
             character={character}
           />
         ))}
-        {/* </div> */}
+        </div>
         <Footer>brought to you by KAT productions....we make terrible games</Footer>
       </Wrapper>
     );

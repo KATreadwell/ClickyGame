@@ -4,6 +4,11 @@
     font-size: 3rem;
     color: white;
     font-weight: bold;
-    background-color: #582aae;
+    background: #582aae;
     margin-bottom: 50px;
+    min-height: 100px;
+    position: fixed;
+    width: 100%;
+    /* display: block; */
+    font-family: sans-serif;
   }
