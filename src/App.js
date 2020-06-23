@@ -11,7 +11,7 @@ class App extends Component {
     characters,
     score: 0,
     highscore: 0,
-    message: "Click any Character!"
+    message: "Click any childhood heroine!"
   };
 
   //on click on character, determine if previously clicked (click = true)
@@ -27,7 +27,7 @@ class App extends Component {
       this.setState({
         score,
         characters: shuffledCharacters,
-        message: "Great job!"
+        message: "Yes! You did it!"
       })
     }
   }
@@ -44,7 +44,7 @@ class App extends Component {
       score: 0,
       highscore,
       characters: this.shuffleCharacters(characters),
-      message: "Bad job! Try Again!"
+      message: "Loser! Try Again!"
     })
   }
 
@@ -76,7 +76,7 @@ class App extends Component {
         </div>
       </Navbar>
       <Wrapper>
-        <Header>Click on any baddass character, but click on her twice and you lose!</Header>
+        <Header>Click on any character, but if you click her twice- you lose!</Header>
         <div className="container">
           {this.state.characters.map((character, index) => (
             <CharacterCard
