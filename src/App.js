@@ -41,11 +41,11 @@ class App extends Component {
     if (score > highscore) {
       highscore = score
     }
-    //shuffle characters if you feel really ambitious
+
     this.setState({
       score: 0,
       highscore,
-      characters
+      characters: this.shuffleCharacters(characters)
     })
   }
 
@@ -63,21 +63,21 @@ class App extends Component {
 
   render() {
     return (
+      <>
+      <Navbar>
+        <div className="title">
+          Kat's Clicky Game!
+      </div>
+        {/* <div className="alert">
+      </div> */}
+        <div className="scorecard">
+          Score = {this.state.score}
+          <div className="high">
+            High Score = {this.state.highscore}
+          </div>
+        </div>
+      </Navbar>
       <Wrapper>
-        <Navbar>
-          <div className="title">
-            Kat's Clicky Game!
-          </div>
-          {/* <div className="alert">
-            
-          </div> */}
-          <div className="scorecard">
-            Score = {this.state.score}
-            <div className="high">
-              High Score = {this.state.highscore}
-            </div>
-          </div>
-        </Navbar>
         <Header>Click on any baddass character, but click on her twice and you lose!</Header>
         <div className="container">
           {this.state.characters.map((character, index) => (
@@ -93,6 +93,7 @@ class App extends Component {
         </div>
         <Footer>brought to you by KAT productions....we make terrible games!</Footer>
       </Wrapper>
+      </>
     );
   }
 }

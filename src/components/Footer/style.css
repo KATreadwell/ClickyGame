@@ -4,6 +4,7 @@
     font-size: 2rem;
     color: white;
     background-color: #582aae;
-    margin-bottom: 50px;
+    margin-bottom: 0;
+    padding: 20px;
     position: sticky;
   }

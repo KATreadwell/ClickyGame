@@ -2,73 +2,73 @@
     {
         "id": 1,
         "name": "Kim Possible",
-        "image": "/img/kim.jpg",
+        "image": "./img/kim.jpg",
         "clicked": false
     },
     {
         "id": 2,
         "name": "Blossom",
-        "image": "/img/blossom.png",
+        "image": "./img/blossom.png",
         "clicked": false
     },
     {
         "id": 3,
         "name": "Buttercup",
-        "image": "/img/buttercup.jpg",
+        "image": "./img/buttercup.jpg",
         "clicked": false
     },
     {
         "id": 4,
         "name": "Catwoman",
-        "image": "/img/catwoman.jpg",
+        "image": "./img/catwoman.jpg",
         "clicked": false
     },
     {
         "id": 5,
         "name": "Harley Quinn",
-        "image": "/img/harley.jpg",
+        "image": "./img/harley.jpg",
         "clicked": false
     },
     {
         "id": 6,
         "name": "Lady Jaye",
-        "image": "/img/ladyJaye.jpg",
+        "image": "./img/ladyJaye.jpg",
         "clicked": false
     },
     {
         "id": 7,
         "name": "Poison Ivy",
-        "image": "/img/poison.jpg",
+        "image": "./img/poison.jpg",
         "clicked": false
     },
     {
         "id": 8,
         "name": "Scarlett",
-        "image": "/img/scarlett.jpg",
+        "image": "./img/scarlett.jpg",
         "clicked": false
     },
     {
         "id": 9,
         "name": "She-ra",
-        "image": "/img/she.jpg",
+        "image": "./img/she.jpg",
         "clicked": false
     },
     {
         "id": 10,
         "name": "Shego",
-        "image": "/img/shego.jpg",
+        "image": "./img/shego.jpg",
         "clicked": false
     },
     {
         "id": 11,
         "name": "Baroness",
-        "image": "/img/baroness.jpg",
+        "image": "./img/baroness.jpg",
         "clicked": false
     },
     {
         "id": 12,
         "name": "Bubbles",
-        "image": "/img/bubbles.png",
+        "image": "./img/bubbles.png",
         "clicked": false
     }
 ]
