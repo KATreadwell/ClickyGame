@@ -11,12 +11,12 @@ class App extends Component {
     characters,
     score: 0,
     highscore: 0,
+    message: "Click any Character!"
   };
 
   //on click on character, determine if previously clicked (click = true)
   ifClicked = (character, index) => {
     if (character.clicked) {
-      // alert(`Game Over :( \nscore: ${this.state.score}`);
       this.restartGame()
     }
     else {
@@ -26,14 +26,12 @@ class App extends Component {
       const shuffledCharacters = this.shuffleCharacters(characters);
       this.setState({
         score,
-        characters: shuffledCharacters
+        characters: shuffledCharacters,
+        message: "Great job!"
       })
     }
   }
 
-  // fail = () => {
-
-  // }
 
   restartGame = () => {
     //compare score to highScore and update highScore if score is higher + update score to 0 + shuffle
@@ -45,7 +43,8 @@ class App extends Component {
     this.setState({
       score: 0,
       highscore,
-      characters: this.shuffleCharacters(characters)
+      characters: this.shuffleCharacters(characters),
+      message: "Bad job! Try Again!"
     })
   }
 
@@ -68,8 +67,7 @@ class App extends Component {
         <div className="title">
           Kat's Clicky Game!
       </div>
-        {/* <div className="alert">
-      </div> */}
+        <div className="alert">{this.state.message}</div>
         <div className="scorecard">
           Score = {this.state.score}
           <div className="high">
