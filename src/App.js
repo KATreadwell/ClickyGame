@@ -47,11 +47,9 @@ class App extends Component {
       message: "Loser! Try Again!"
     })
 
-    // const resetCharacters = this.state.characters.map((character) => {
-    //   character.clicked = false;
-
-    //   return character;
-    // });
+    this.state.characters.forEach((character) => {
+      character.clicked = false;
+    });
   }
 
   shuffleCharacters = (characters) => {
