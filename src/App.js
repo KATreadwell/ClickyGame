@@ -2,58 +2,65 @@ import React, { Component } from "react";
 import CharacterCard from "./components/CharacterCard";
 import Wrapper from "./components/Wrapper";
 import Header from "./components/Header";
-import characters from "./characters.json";
+import Characters from "./characters.json";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
 class App extends Component {
   state = {
-    characters,
+    characters: [],
     score: 0,
     highscore: 0,
     message: "Click any childhood heroine!"
   };
 
+  componentDidMount() {
+    this.loadCharacters();
+  }
+
+  loadCharacters() {
+    let characters = Characters.map(character => Object.assign({clicked: false}, character))
+    characters = this.shuffleCharacters(characters);
+    this.setState({
+      characters
+    });
+  }
+
   //on click on character, determine if previously clicked (click = true)
   ifClicked = (character, index) => {
     if (character.clicked) {
-      this.restartGame()
+      this.restartGame();
     }
     else {
       let { score, characters } = this.state;
-      score++;
       characters[index].clicked = true;
-      const shuffledCharacters = this.shuffleCharacters(characters);
       this.setState({
-        score,
-        characters: shuffledCharacters,
+        score: score + 1,
+        characters: this.shuffleCharacters(characters),
         message: "Yes! You did it!"
       })
     }
   }
 
-
   restartGame = () => {
     //compare score to highScore and update highScore if score is higher + update score to 0 + shuffle
     let { score, highscore } = this.state;
     if (score > highscore) {
-      highscore = score
+      highscore = score;
     }
+
+    this.loadCharacters();
 
     this.setState({
       score: 0,
       highscore,
-      characters: this.shuffleCharacters(characters),
       message: "Loser! Try Again!"
     })
-
-    this.state.characters.forEach((character) => {
-      character.clicked = false;
-    });
   }
-
-  shuffleCharacters = (characters) => {
-    var currentIndex = characters.length, temporaryValue, randomIndex;
+  
+  shuffleCharacters = (origCharacters) => {
+    const characters = Array.from(origCharacters);
+    let currentIndex = characters.length, temporaryValue, randomIndex;
     while (0 !== currentIndex) {
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
@@ -63,7 +70,7 @@ class App extends Component {
     }
     return characters;
   }
-
+ 
   render() {
     return (
       <>
